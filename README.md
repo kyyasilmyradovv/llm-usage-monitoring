@@ -2,15 +2,6 @@
 
 A prototype service that acts as a proxy to LLM APIs (e.g., OpenAI) and logs token usage for observability and monitoring purposes. This is a simplified version of a core component for AI agentic systems observability.
 
-## Features
-
-- **LLM Proxy**: Acts as a proxy to OpenAI's Chat Completions API
-- **Token Usage Logging**: Automatically logs input/output tokens for each request
-- **User Labeling**: Supports custom user labels for request categorization
-- **Usage Dashboard**: Real-time dashboard showing aggregated usage statistics
-- **Modern UI**: Beautiful, responsive React frontend with TypeScript
-- **Containerized**: Fully containerized with Docker and Docker Compose
-
 ## Architecture
 
 - **Backend**: Python/FastAPI with PostgreSQL database
@@ -150,19 +141,6 @@ python -m pytest tests/
 - Responsive design for mobile and desktop
 - Axios for API communication
 
-## What I Would Improve (Given More Time)
-
-1. **Authentication & Authorization**: Add user authentication and API key management
-2. **Rate Limiting**: Implement rate limiting per user/API key
-3. **Advanced Analytics**: Add time-series analysis and cost tracking
-4. **Webhook Support**: Real-time notifications for usage thresholds
-5. **Multi-LLM Support**: Extend beyond OpenAI to other providers
-6. **Caching**: Implement Redis caching for frequently accessed data
-7. **Monitoring**: Add Prometheus metrics and Grafana dashboards
-8. **Testing**: More comprehensive test coverage including integration tests
-9. **Error Handling**: Better error handling and user feedback
-10. **Performance**: Database query optimization and connection pooling
-
 ## Technical Decisions
 
 - **FastAPI**: Chosen for its modern async support, automatic documentation, and excellent performance
@@ -170,14 +148,6 @@ python -m pytest tests/
 - **React + TypeScript**: Modern frontend stack with type safety
 - **Docker Compose**: Simple orchestration for development and testing
 - **Simple Schema**: Focused on core requirements rather than over-engineering
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Errors**: Ensure PostgreSQL container is healthy before starting backend
-2. **Port Conflicts**: Check if ports 3000, 8008, or 5432 are already in use
-3. **Build Failures**: Ensure Docker has sufficient memory and disk space
 
 ### Logs
 
@@ -188,7 +158,3 @@ docker-compose logs backend
 docker-compose logs frontend
 docker-compose logs postgres
 ```
-
-## License
-
-This project is created for the Overmind take-home assessment.
